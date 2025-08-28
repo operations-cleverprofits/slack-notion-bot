@@ -1,5 +1,5 @@
-import { App, ExpressReceiver } from "@slack/bolt";
-import { Client as Notion } from "@notionhq/client";
+const { App, ExpressReceiver } = require("@slack/bolt");
+const { Client: Notion } = require("@notionhq/client");
 
 // ---------- Env ----------
 const {
