@@ -1,0 +1,14 @@
+{
+  "name": "slack-push-to-notion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "@slack/bolt": "^3.18.0"
+  }
+}
