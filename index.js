@@ -21,6 +21,12 @@ const receiver = new ExpressReceiver({
   signingSecret: SLACK_SIGNING_SECRET,
   endpoints: "/slack/events",
 });
+receiver.router.post("/slack/events", (req, res, next) => {
+  if (req.body && req.body.type === "url_verification") {
+    return res.status(200).send(req.body.challenge);
+  }
+  next();
+});
 const app = new App({
   token: SLACK_BOT_TOKEN,
   receiver
